@@ -18,35 +18,22 @@ export default defineConfig([
       'no-shadow': 'error', // no variable shadowing
       'prefer-promise-reject-errors': 'error', // Ensure proper error handling
       camelcase: ['error', { properties: 'always' }], // camelCase for variables & functions
-      "no-useless-return": "error", // No useless returns
-      "prefer-const": "error", // Use const whenever possible
-      "prefer-destructuring": ["error", { object: true, array: true }], // Always destructure
-      "prefer-object-spread": "error", // no Object.assign
+      'no-useless-return': 'error', // No useless returns
+      'prefer-const': 'error', // Use const whenever possible
+      'prefer-destructuring': ['error', { object: true, array: true }], // Always destructure
+      'prefer-object-spread': 'error', // no Object.assign
       'prefer-template': 'error', // Enforce template literals
       'new-cap': ['error', { newIsCap: true, capIsNew: false }], // Class names must start with an uppercase letter
       'func-name-matching': ['error', 'always', { considerPropertyDescriptor: true }], // Function names must start with a lowercase letter
       'no-useless-rename': 'error', // no useless renaming (e.g., `const user = user`)
       'no-var': 'error', // use `let` or `const`
       'prefer-arrow-callback': 'error', // arrow functions ftw
-      "func-style": ["error", "expression"], // Force function expressions
-      "arrow-body-style": ["error", "always"], // Always use `{}` in arrow functions
-      "no-const-assign": "error", // Dont mess with immutable objects
-      "guard-for-in": "error", // Prevent `for...in` without checking `hasOwnProperty`
-      "no-else-return": ["error", { allowElseIf: false }], // Unnecessary else blocks after a return statement
-      "no-useless-catch": "error", // Prevent unnecessary catch clauses that simply re-throw the error without doing anything
-      'require-await': 'error', // Enforce usage of await in async functions
-      // Enforce async/await with try/catch instead of `.then().catch()`
-      'no-restricted-syntax': [
-        'error',
-        {
-          selector: "CallExpression[callee.property.name='then']",
-          message: 'Use async/await instead of .then().'
-        },
-        {
-          selector: "CallExpression[callee.property.name='catch']",
-          message: 'Use try/catch instead of .catch().'
-        }
-      ]
+      'arrow-body-style': ['error', 'always'], // Always use `{}` in arrow functions
+      'no-const-assign': 'error', // Dont mess with immutable objects
+      'guard-for-in': 'error', // Prevent `for...in` without checking `hasOwnProperty`
+      'no-else-return': ['error', { allowElseIf: false }], // Unnecessary else blocks after a return statement
+      'no-useless-catch': 'error', // Prevent unnecessary catch clauses that simply re-throw the error without doing anything
+      'require-await': 'error' // Enforce usage of await in async functions
     }
   }
 ]);
